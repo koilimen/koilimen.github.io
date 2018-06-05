@@ -1,0 +1,23 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    font-size: 2em;
+}
+.header__label{
+    font-size:2em;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    border-radius: 1em;
+    width:1.5em;
+    height:1.5em;
+    display:block;
+    float:right;
+}
+.header__profession{
+    font-size: 0.7em;
+    color: #999;
+    display:block;
+}
