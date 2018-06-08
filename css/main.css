@@ -5,6 +5,9 @@ body{
 header{
     font-size: 2em;
 }
+p{
+    color:#444;
+}
 .header__label{
     font-size:2em;
     text-align: center;
@@ -20,4 +23,12 @@ header{
     font-size: 0.7em;
     color: #999;
     display:block;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.content-row{
+    margin-top: 25px;
 }
