@@ -1,2 +1,6 @@
 /.idea
-*.iml
+/.bundle
+/vendor
+/_site
+Gemfile.lock
+/.sass-cache
