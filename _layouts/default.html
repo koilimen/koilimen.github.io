@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{%- include head.html -%}
+
+<body>
+    <div class="container">
+        {%- include header.html -%}
+        <main class="row" aria-label="Content">
+            <div class="col-md-4 ">
+                <aside class='profile'>
+                    <div class="profile__image">
+                        <img src='{{"/assets/elly.jpg" | absolute_url}}' class='img-fluid' alt='My face' />
+                    </div>
+                    <div class="profile__details">
+                        <p class='profile__details_row'><i class='fa fa-briefcase fa-fw'></i> Web Developer</p>
+                        <p class='profile__details_row'><i class="fa fa-home fa-fw "></i> {{site.address}}</p>
+                        <p class='profile__details_row'><i class="fa fa-envelope fa-fw "></i> {{site.email}}</p>
+                        <p class='profile__details_row'><i class="fa fa-phone fa-fw "></i> {{site.phone}}</p>
+                    </div>
+                     <div class="profile__details">
+                        <div class='profile__details-heading'>
+                          <i class='fa fa-certificate fa-fw fa_cb'></i> Skills
+                        </div>
+                        <p class='profile__details_row'>
+                          Java 8
+                        </p>
+                        <p class='profile__Details_row'>
+                          Spring Framework 5
+                        </p>
+                        <p class='profile__Details_row'>
+                          Junit 5
+                        </p>
+                        <p class='profile__Details_row'>
+                          Maven and Gradle
+                        </p>
+                        <p class='profile__Details_row'>
+                          Angular 5^
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-md-8">
+                {{ content }}
+            </div>
+        </main>
+        {%- include footer.html -%}
+    </div>
+</body>
+
+</html>
