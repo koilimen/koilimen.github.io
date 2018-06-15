@@ -3,7 +3,7 @@ layout: default
 ---
 <main class="row" aria-label="Content">
     <div class="col-md-4 ">
-        <aside class='profile'>
+        <aside class='profile '>
             <div class="profile__image">
                 <img src='{{"/assets/elly.jpg" | absolute_url}}' class='img-fluid' alt='My face' />
             </div>
@@ -18,24 +18,50 @@ layout: default
                     <i class='fa fa-certificate fa-fw fa_cb'></i> Skills
                 </div>
                 <p class='profile__details_row'>
-                    Java 8
+                     Java 8, 9
+                </p>
+                <p class='profile__details_row'>
+                    HTML 5
                 </p>
                 <p class='profile__Details_row'>
-                    Spring Framework 5
+                    CSS 3 / SASS
                 </p>
                 <p class='profile__Details_row'>
-                    Junit 5
+                    JavaScript  
                 </p>
                 <p class='profile__Details_row'>
-                    Maven and Gradle
+                    Angular 6
                 </p>
                 <p class='profile__Details_row'>
-                    Angular 5^
+                    PostgreSQL
+                </p>
+            </div>
+            <div class="profile__details">
+                <div class='profile__details-heading'>
+                    <i class="fa fa-globe fa-fw"></i> Languages
+                </div>
+                <p class='profile__Details_row'>
+                    Russian
+                    <div class="bar-wrapper">
+                        <div class='bar' style="width:100%">
+                            Native speaker
+                        </div>
+                    </div>
+                </p>
+                <p class='profile__Details_row'>
+                    English
+                    <div class="bar-wrapper">
+                        <div class='bar' style="width:70%">
+                            Intermediate
+                        </div>
+                    </div>
                 </p>
             </div>
         </aside>
     </div>
     <div class="col-md-8">
-        {{ content }}
+        <article class="content ">
+            {{ content }}
+        </article>
     </div>
 </main>

@@ -1,5 +1,7 @@
+@import 'colors'
+
 .fa
-	color: #4a76a8 !important
+	color: $primary-color !important
 header
 	margin: 25px 	0 25px
 .left-floated
@@ -17,3 +19,26 @@ header
 		font-size: 15px
 	&:hover
 		opacity: 0.8
+
+.bar-wrapper
+	display: block
+	background: #ddd
+	width: 100%	
+	border-radius: 20px
+	.bar
+		border-radius: 20px
+		display: block
+		height: 25px
+		background: $primary-color
+		color: #fff
+		text-align: center
+.shadowed
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	padding: 25px 10px
+
+.badge-blue
+	font-size: 1rem
+	background-color: $primary-color
+
+.fa-fw
+	margin-right: 10px
