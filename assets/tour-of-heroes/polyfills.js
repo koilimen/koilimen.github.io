@@ -5473,7 +5473,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/igor/workspace/koilimen.github.io/_pages/tour-of-heroes/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /home/igor/personal_ws/koilimen.github.io/_pages/tour-of-heroes/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

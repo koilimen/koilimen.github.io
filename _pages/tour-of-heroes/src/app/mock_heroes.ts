@@ -1,4 +1,4 @@
-import { Hero }  from './Hero.class';
+import { Hero }  from './Hero';
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -13,4 +13,4 @@ const HEROES: Hero[] = [
   { id: 20, name: 'Tornado' }
 ];
 
-export default HEROES;
+export  {HEROES};
