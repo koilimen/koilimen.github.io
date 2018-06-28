@@ -1,5 +1,6 @@
 /.idea
 /.bundle
+*.iml
 /vendor
 /_site
 Gemfile.lock
