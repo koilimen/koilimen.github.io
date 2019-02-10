@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Koilimen | Simple Css Tree Widget</title>
+	<style type="text/css">
+	.tree__node-body{
+		display:none;
+	}
+	.tree__node-chb{
+		display: none;
+	}
+	.tree__node label{
+		cursor: pointer;
+	}
+	.tree__node label:before{
+		display: inline-block;
+		width:15px;
+		content: "+";
+	}
+	.tree__node input[type='checkbox']:checked ~ .tree__node-body {
+		display: block;
+	}
+	.tree__node input[type='checkbox']:checked ~ label:before {
+		content: "-";
+	}
+	.tree ul{
+		margin:0;
+	}
+	.tree li {
+		list-style: none;
+	}
+</style>
+</head>
+<body>
+	<div class="tree">
+		<div class="tree__node">
+			<input class="tree__node-chb" type="checkbox" id="node1__checkbox" name="node1"/>
+			<label for="node1__checkbox" class="tree__node-label">Parent 1</label>
+			<ul class="tree__node-body">
+				<li>First item</li>		
+				<li>First item</li>		
+				<li>
+					<div class="tree__node">
+						<input class="tree__node-chb" type="checkbox" id="node2__checkbox" name="node2"/>
+						<label for="node2__checkbox" class="tree__node-label">Parent 2</label>
+						<ul class="tree__node-body">
+							<li>First item</li>		
+							<li>First item</li>		
+							<li>First item</li>		
+						</ul>
+					</div>
+				</li>		
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
