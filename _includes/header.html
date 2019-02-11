@@ -1,11 +1,13 @@
-<header>
-    <a class="site-title left-floated" rel="author" href="/">{{ site.title | escape }}</a>
-    <nav class="nav justify-content-end">
-        {%- assign default_paths = site.pages | sort: "order" |map: "path" -%} 
-        {%- assign page_paths = site.header_pages | default: default_paths -%} 
-        {%- for path in page_paths -%} {%- assign my_page = site.pages | where: "path", path | first -%} {%- if my_page.title and my_page.order-%}
-        <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-        {%- endif -%}
-        {%- endfor -%}
-    </nav>
+<header class='row'>
+    <div class="col-md-12 col-sm-12">
+        <a class="site-title left-floated" rel="author" href="/">{{ site.title | escape }}</a>
+        <nav class="nav justify-content-end">
+            {%- assign default_paths = site.pages | sort: "order" |map: "path" -%} 
+            {%- assign page_paths = site.header_pages | default: default_paths -%} 
+            {%- for path in page_paths -%} {%- assign my_page = site.pages | where: "path", path | first -%} {%- if my_page.title and my_page.order-%}
+            <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+            {%- endfor -%}
+        </nav>
+    </div>
 </header>
