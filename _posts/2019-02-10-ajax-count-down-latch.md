@@ -11,7 +11,7 @@ tags: javascript ajax tips tricks
 Hello friends! Today i want to tell you how to make several ajax requests and call some method only when all of them will be finished.
 This is not the only way  to do it, but it most simple, that I know.
 
-So first we nnedto make a number of ajax requests. Let's use Fetch API for it.
+So first we need to make a number of ajax requests. Let use Fetch API for it.
 <pre >
 <code class="javascript">
 fetch('/path/to/res1', {method: 'GET'}).then(function (response) { console.log(response); });
