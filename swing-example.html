@@ -75,8 +75,11 @@
     </div>
     <script>
         var x_start = 0;
+        var time_start = 0;
+        var time_end = 0;
         var screens = document.querySelector("#screens");
         var screensLeft;
+        var screensWidth = screens.offsetWidth;
 
         window.addEventListener('touchstart', function (e) {
             e.preventDefault();
@@ -84,6 +87,7 @@
             var touch = e.changedTouches.item(0);
             screensLeft = screens.style.left ? parseInt(screens.style.left) : 0;
             x_start = touch.screenX;
+            time_start = performance.now();
         })
         window.addEventListener("touchmove", function (e) {
             console.log('TOuch move');
@@ -95,11 +99,28 @@
         window.addEventListener("touchend", function (e) {
             var touch = e.changedTouches.item(0);
             var dx = touch.screenX - x_start;
-            if (dx / window.outerWidth >= 0.3) {
-                screens.style.left = (screensLeft + window.outerWidth) + "px";
-            } else if (dx / window.outerWidth <= -0.3) {
-                screens.style.left = (screensLeft - window.outerWidth) + "px";
+            time_end = performance.now();
+            if (time_end - time_start <= 1000 && Math.abs(dx) >= 30) {
+                console.log('swipe');
+                // swipe 
+                if (dx > 0) {
+                    // swipe to left
+                    if (screensLeft < 0) {
+                        screens.style.left = (screensLeft + window.outerWidth) + "px";
+                    } else {
+                        screens.style.left = screensLeft + 'px';
+                    }
+                } else {
+                    if (screensLeft > (window.outerWidth - screensWidth))
+                        screens.style.left = (screensLeft - window.outerWidth) + "px";
+                    else {
+                        screens.style.left = screensLeft + 'px';
+                    }
+                }
+            } else {
+                screens.style.left = screensLeft + 'px';
             }
+
         })
     </script>
 </body>
