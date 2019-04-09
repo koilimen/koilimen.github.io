@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Koilimen | swing event examplr</title>
+    <title>Koilimen | swipe event examplr</title>
     <style>
         * {
             margin: 0;
@@ -45,15 +45,19 @@
             background: #0000ee;
         }
 
-        @media screen and (max-width:400px) {
+        @media screen and (max-width:480px) {
             .screen-container {
-                overflow: hidden;
+                overflow-x: hidden;
+                overflow-y: visible;
             }
 
+            .screen {
+                width: 480px;
+            }
             .screens {
                 position: absolute;
                 display: block;
-                width: 1200px;
+                width: 1440px;
             }
         }
     </style>
